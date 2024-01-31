@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,13 +21,12 @@ namespace AmeritechDSAssessment
 		public AssessmentForm()
 		{
 			InitializeComponent();
-			FilePath = string.Empty;
-			
+			FilePath = string.Empty;		
 		}
 
 		private void SelectFileButton_Click(object sender, EventArgs e)
 		{
-			OpenFileDialog openFileDialog = new OpenFileDialog();
+			var openFileDialog = new OpenFileDialog();
 			openFileDialog.Filter = "csv files (*.csv)|*.csv|All files (*.*)|*.*";
 			DialogResult result = openFileDialog.ShowDialog();
 
@@ -47,7 +47,39 @@ namespace AmeritechDSAssessment
 					Debug.WriteLine(s);
 				}
 			}
+
+			var bigIntList = ConvertToBigIntegersList(FileLines);
+			foreach(BigInteger bigInteger in bigIntList)
+			{
+				Debug.WriteLine(bigInteger);
+			}
+
+			DisplayLastTenDigitsOfSum(bigIntList);
 		}
 
+		private List<BigInteger> ConvertToBigIntegersList(string[] lines)
+		{
+			var bigIntList = new List<BigInteger>();
+
+			foreach(string line in lines)
+			{
+				BigInteger bigInteger = BigInteger.Parse(line.Replace("'", ""));
+				bigIntList.Add(bigInteger);
+			}
+
+			return bigIntList;
+		}
+
+		private void DisplayLastTenDigitsOfSum(List<BigInteger> bigIntegers)
+		{
+			BigInteger sum = 0;
+			foreach(BigInteger bigInteger in bigIntegers) 
+			{
+				sum += bigInteger;
+			}
+
+			long lastTenDigits = (long)(sum % 10000000000);
+			ResultTextBox.Text = lastTenDigits.ToString();
+		}
 	}
 }

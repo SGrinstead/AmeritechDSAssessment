@@ -31,6 +31,7 @@
 			this.SelectFileButton = new System.Windows.Forms.Button();
 			this.SelectedFileNameTextbox = new System.Windows.Forms.TextBox();
 			this.SolveButton = new System.Windows.Forms.Button();
+			this.ResultTextBox = new System.Windows.Forms.TextBox();
 			this.SuspendLayout();
 			// 
 			// SelectFileButton
@@ -61,11 +62,20 @@
 			this.SolveButton.UseVisualStyleBackColor = true;
 			this.SolveButton.Click += new System.EventHandler(this.SolveButton_Click);
 			// 
+			// ResultTextBox
+			// 
+			this.ResultTextBox.Location = new System.Drawing.Point(35, 236);
+			this.ResultTextBox.Name = "ResultTextBox";
+			this.ResultTextBox.ReadOnly = true;
+			this.ResultTextBox.Size = new System.Drawing.Size(607, 20);
+			this.ResultTextBox.TabIndex = 3;
+			// 
 			// AssessmentForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.ResultTextBox);
 			this.Controls.Add(this.SolveButton);
 			this.Controls.Add(this.SelectedFileNameTextbox);
 			this.Controls.Add(this.SelectFileButton);
@@ -81,6 +91,7 @@
 		private System.Windows.Forms.Button SelectFileButton;
 		private System.Windows.Forms.TextBox SelectedFileNameTextbox;
 		private System.Windows.Forms.Button SolveButton;
+		private System.Windows.Forms.TextBox ResultTextBox;
 	}
 }
 

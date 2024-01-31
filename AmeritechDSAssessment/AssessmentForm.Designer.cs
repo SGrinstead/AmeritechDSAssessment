@@ -36,7 +36,7 @@
 			// 
 			// SelectFileButton
 			// 
-			this.SelectFileButton.Location = new System.Drawing.Point(35, 43);
+			this.SelectFileButton.Location = new System.Drawing.Point(35, 93);
 			this.SelectFileButton.Name = "SelectFileButton";
 			this.SelectFileButton.Size = new System.Drawing.Size(75, 23);
 			this.SelectFileButton.TabIndex = 0;
@@ -46,7 +46,7 @@
 			// 
 			// SelectedFileNameTextbox
 			// 
-			this.SelectedFileNameTextbox.Location = new System.Drawing.Point(35, 72);
+			this.SelectedFileNameTextbox.Location = new System.Drawing.Point(35, 122);
 			this.SelectedFileNameTextbox.Name = "SelectedFileNameTextbox";
 			this.SelectedFileNameTextbox.ReadOnly = true;
 			this.SelectedFileNameTextbox.Size = new System.Drawing.Size(607, 20);
@@ -54,7 +54,7 @@
 			// 
 			// SolveButton
 			// 
-			this.SolveButton.Location = new System.Drawing.Point(35, 207);
+			this.SolveButton.Location = new System.Drawing.Point(35, 240);
 			this.SolveButton.Name = "SolveButton";
 			this.SolveButton.Size = new System.Drawing.Size(75, 23);
 			this.SolveButton.TabIndex = 2;
@@ -64,7 +64,7 @@
 			// 
 			// ResultTextBox
 			// 
-			this.ResultTextBox.Location = new System.Drawing.Point(35, 236);
+			this.ResultTextBox.Location = new System.Drawing.Point(35, 269);
 			this.ResultTextBox.Name = "ResultTextBox";
 			this.ResultTextBox.ReadOnly = true;
 			this.ResultTextBox.Size = new System.Drawing.Size(607, 20);

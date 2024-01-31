@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace AmeritechDSAssessment
+{
+	public partial class AssessmentForm : Form
+	{
+		public AssessmentForm()
+		{
+			InitializeComponent();
+		}
+
+		private void SelectFileButton_Click(object sender, EventArgs e)
+		{
+
+		}
+	}
+}

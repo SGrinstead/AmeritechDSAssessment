@@ -80,7 +80,7 @@
 			this.Controls.Add(this.SelectedFileNameTextbox);
 			this.Controls.Add(this.SelectFileButton);
 			this.Name = "AssessmentForm";
-			this.Text = "Form1";
+			this.Text = "Ameritech Data Solutions Assessment";
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
